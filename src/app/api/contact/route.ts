@@ -155,6 +155,19 @@ export async function POST(req: Request) {
     // Debug API Key status
     console.log('[Resend] API Key loaded:', process.env.RESEND_API_KEY ? process.env.RESEND_API_KEY.slice(0, 8) + '...' : 'MISSING');
 
+    if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 'MISSING') {
+      console.warn('[Resend] WARNING: RESEND_API_KEY is not configured. Simulating successful form submission (Mock Mode).');
+      console.log('--- MOCK EMAIL OUTBOX ---');
+      console.log(`TO ADMIN (assurebit@gmail.com): New Project Inquiry from ${name} (${projectType})`);
+      console.log(`TO USER (${email}): Inquiry Receipt Confirmation`);
+      console.log('-------------------------');
+      return NextResponse.json({ 
+        success: true, 
+        mock: true, 
+        message: 'Form submitted successfully in developer mock mode.' 
+      });
+    }
+
     const fromAddress = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
     const adminToAddress = 'assurebit@gmail.com';
 

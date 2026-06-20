@@ -2,7 +2,7 @@
 
 import React from "react"
 import { motion } from "framer-motion"
-import { Send } from "lucide-react"
+import { Send, ArrowRight } from "lucide-react"
 
 export const Contact = () => {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
@@ -105,10 +105,15 @@ export const Contact = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 disabled={isSubmitting}
-                className="w-full py-5 rounded-2xl bg-deep-slate text-white font-bold text-lg flex items-center justify-center gap-3 shadow-xl hover:shadow-primary/20 transition-all disabled:opacity-70 cursor-pointer"
+                className="group w-full py-5 rounded-2xl bg-deep-slate text-white font-bold text-lg flex items-center justify-center gap-3 shadow-xl hover:shadow-primary/20 transition-all disabled:opacity-70 cursor-pointer"
                 type="submit"
               >
-                {isSubmitting ? 'Sending...' : 'Start the conversation ⇒'}
+                {isSubmitting ? 'Sending...' : (
+                  <>
+                    Start the conversation
+                    <ArrowRight size={20} className="transition-transform duration-300 group-hover:translate-x-1.5" />
+                  </>
+                )}
               </motion.button>
               
               {submitStatus === 'success' && (

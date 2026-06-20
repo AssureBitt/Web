@@ -55,7 +55,8 @@ export const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="group flex items-center gap-2 px-8 py-4 rounded-full bg-deep-slate font-bold text-white hover:bg-primary transition-all shadow-lg hover:shadow-xl cursor-pointer"
             >
-              Let's talk about your idea ⇒
+              Let's talk about your idea
+              <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1.5" />
             </motion.button>
           </Link>
           <Link href="/#how-we-work" passHref>

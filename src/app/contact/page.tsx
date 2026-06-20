@@ -500,10 +500,15 @@ export default function ContactPage() {
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                           disabled={isSubmitting}
-                          className="px-8 py-3.5 rounded-full bg-deep-slate text-white font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2 shadow-xl hover:bg-primary transition-all cursor-pointer disabled:opacity-75"
+                          className="group px-8 py-3.5 rounded-full bg-deep-slate text-white font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2 shadow-xl hover:bg-primary transition-all cursor-pointer disabled:opacity-75"
                           type="submit"
                         >
-                          {isSubmitting ? "Sending..." : "Submit Intake & Start Conversation ⇒"}
+                          {isSubmitting ? "Sending..." : (
+                            <>
+                              Submit Intake & Start Conversation
+                              <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1.5" />
+                            </>
+                          )}
                         </motion.button>
                       )}
                     </div>

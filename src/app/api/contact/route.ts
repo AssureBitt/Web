@@ -140,7 +140,7 @@ export async function POST(req: Request) {
                 <tr>
                   <td style="background-color: #FDFCF8; padding: 30px; text-align: center; border-top: 1px solid #F5F5F4;">
                     <p style="margin: 0; font-size: 12px; color: #6A89A7;">
-                      If you have any urgent updates, feel free to reply directly to this email or write to us at <a href="mailto:hello@assurebit.co" style="color: #3b82f6; text-decoration: none;">hello@assurebit.co</a>.
+                      If you have any urgent updates, feel free to reply directly to this email or write to us at <a href="mailto:assurebit@gmail.com" style="color: #3b82f6; text-decoration: none;">assurebit@gmail.com</a>.
                     </p>
                   </td>
                 </tr>
@@ -152,23 +152,8 @@ export async function POST(req: Request) {
       </html>
     `;
 
-    // Fallback if Resend API Key is not set/configured
-    if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 'MISSING' || process.env.RESEND_API_KEY.trim() === '') {
-      console.warn('[Resend] WARNING: RESEND_API_KEY is not configured. Falling back to console-logging the submissions.');
-      console.log('==================================================');
-      console.log('RESEND EMAIL MOCK (DEVELOPMENT MODE)');
-      console.log('--------------------------------------------------');
-      console.log('TO ADMIN: assurebit@gmail.com');
-      console.log(`SUBJECT: New Project Inquiry from ${name} - ${projectType}`);
-      console.log('CONTENT (HTML):', adminHtmlContent.slice(0, 200) + '...');
-      console.log('--------------------------------------------------');
-      console.log(`TO USER: ${email}`);
-      console.log('SUBJECT: We received your inquiry - Assurebit');
-      console.log('CONTENT (HTML):', userHtmlContent.slice(0, 200) + '...');
-      console.log('==================================================');
-      
-      return NextResponse.json({ success: true, mock: true });
-    }
+    // Debug API Key status
+    console.log('[Resend] API Key loaded:', process.env.RESEND_API_KEY ? process.env.RESEND_API_KEY.slice(0, 8) + '...' : 'MISSING');
 
     const fromAddress = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
     const adminToAddress = 'assurebit@gmail.com';

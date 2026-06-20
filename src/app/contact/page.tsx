@@ -169,7 +169,7 @@ export default function ContactPage() {
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-4">
                 <a 
-                  href="mailto:hello@assurebit.co" 
+                  href="mailto:assurebit@gmail.com" 
                   className="flex items-center gap-4 text-muted-text hover:text-primary transition-colors group cursor-pointer"
                 >
                   <div className="w-10 h-10 rounded-xl bg-soft-gray flex items-center justify-center text-deep-slate group-hover:bg-primary group-hover:text-white transition-colors duration-300">
@@ -177,12 +177,12 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-deep-slate uppercase">Email Us</p>
-                    <p className="text-sm">hello@assurebit.co</p>
+                    <p className="text-sm">assurebit@gmail.com</p>
                   </div>
                 </a>
 
                 <a 
-                  href="tel:+15551234567" 
+                  href="tel:+12048697815" 
                   className="flex items-center gap-4 text-muted-text hover:text-primary transition-colors group cursor-pointer"
                 >
                   <div className="w-10 h-10 rounded-xl bg-soft-gray flex items-center justify-center text-deep-slate group-hover:bg-primary group-hover:text-white transition-colors duration-300">
@@ -190,17 +190,20 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-deep-slate uppercase">Call Us</p>
-                    <p className="text-sm">+1 (555) 123-4567</p>
+                    <p className="text-sm">+1 (204) 869-7815</p>
                   </div>
                 </a>
 
-                <div className="flex items-center gap-4 text-muted-text sm:col-span-2 md:col-span-1">
-                  <div className="w-10 h-10 rounded-xl bg-soft-gray flex items-center justify-center text-deep-slate">
+                <div className="flex items-start gap-4 text-muted-text sm:col-span-2 md:col-span-1">
+                  <div className="w-10 h-10 rounded-xl bg-soft-gray flex items-center justify-center text-deep-slate mt-1">
                     <MapPin size={18} />
                   </div>
                   <div>
                     <p className="text-xs font-bold text-deep-slate uppercase">Headquarters</p>
-                    <p className="text-sm">123 Future Lane, Tech City, CA</p>
+                    <p className="text-sm whitespace-pre-line leading-relaxed">
+                      126 MERGANSER DR W
+                      CHESTERMERE AB  T1X 2X8
+                    </p>
                   </div>
                 </div>
               </div>

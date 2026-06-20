@@ -40,11 +40,12 @@ export const FooterV2 = () => {
           <div>
             <h4 className="font-bold text-deep-slate mb-6 uppercase text-xs tracking-widest">Company</h4>
             <ul className="space-y-4 text-sm text-muted-text">
+              <li><Link href="/how-we-work" className="hover:text-accent-blue transition-colors">How We Work</Link></li>
               <li><Link href="/about" className="hover:text-accent-blue transition-colors">About Us</Link></li>
               <li><Link href="/services" className="hover:text-accent-blue transition-colors">Services</Link></li>
-              <li><Link href="/ai" className="hover:text-accent-blue transition-colors">AI Services</Link></li>
-              <li><Link href="/#technologies" className="hover:text-accent-blue transition-colors">Technologies</Link></li>
-              <li><Link href="/#contact" className="hover:text-accent-blue transition-colors">Contact</Link></li>
+              <li><Link href="/case-studies" className="hover:text-accent-blue transition-colors">Case Studies</Link></li>
+              <li><Link href="/faq" className="hover:text-accent-blue transition-colors">FAQ</Link></li>
+              <li><Link href="/contact" className="hover:text-accent-blue transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -53,16 +54,19 @@ export const FooterV2 = () => {
             <h4 className="font-bold text-deep-slate mb-6 uppercase text-xs tracking-widest">Contact</h4>
             <ul className="space-y-4 text-sm text-muted-text">
               <li>
-                <a href="mailto:hello@assurebit.co" className="hover:text-accent-blue transition-colors">
-                  hello@assurebit.co
+                <a href="mailto:assurebit@gmail.com" className="hover:text-accent-blue transition-colors">
+                  assurebit@gmail.com
                 </a>
               </li>
               <li>
-                <a href="tel:+15551234567" className="hover:text-accent-blue transition-colors">
-                  +1 (555) 123-4567
+                <a href="tel:+12048697815" className="hover:text-accent-blue transition-colors">
+                  +1 (204) 869-7815
                 </a>
               </li>
-              <li>123 Future Lane, Tech City, CA</li>
+              <li className="whitespace-pre-line leading-relaxed">
+                126 MERGANSER DR W
+                CHESTERMERE AB  T1X 2X8
+              </li>
             </ul>
           </div>
         </div>

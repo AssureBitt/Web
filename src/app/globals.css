@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FDFCF8;
+  --foreground: #384959;
+  --muted: rgba(56, 73, 89, 0.7);
+  --primary: #6A89A7;
+  --accent-blue: #88BDF2;
+  --light-blue: #BDDDFC;
+  --deep-slate: #384959;
+  --soft-gray: #F5F5F4;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted-text: var(--muted);
+  --color-primary: var(--primary);
+  --color-accent-blue: var(--accent-blue);
+  --color-light-blue: var(--light-blue);
+  --color-deep-slate: var(--deep-slate);
+  --color-soft-gray: var(--soft-gray);
+
+  --font-outfit: var(--font-outfit);
+  --font-reenie: var(--font-reenie);
+
+  --radius-2xl: 2rem;
+  --radius-4xl: 4rem;
+
+  --shadow-premium: 0 10px 40px rgba(56, 73, 89, 0.08);
+
+  --animate-float: float 6s infinite ease-in-out;
+  --animate-orbit-spin: orbit-spin 40s linear infinite;
+  --animate-orbit-spin-reverse: orbit-spin-reverse 40s linear infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes orbit-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-spin-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-outfit), sans-serif;
+  overflow-x: hidden;
+}
+
+.font-reenie {
+  font-family: var(--font-reenie), cursive;
+}

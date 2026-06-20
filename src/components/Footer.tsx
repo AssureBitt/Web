@@ -41,12 +41,12 @@ export const Footer = () => {
           <div>
             <h4 className="font-bold text-deep-slate mb-6 uppercase text-xs tracking-widest">Company</h4>
             <ul className="space-y-4 text-sm text-muted-text">
+              <li><Link href="/how-we-work" className="hover:text-accent-blue transition-colors">How We Work</Link></li>
               <li><Link href="/about" className="hover:text-accent-blue transition-colors">About Us</Link></li>
               <li><Link href="/services" className="hover:text-accent-blue transition-colors">Services</Link></li>
-              <li><Link href="/ai" className="hover:text-accent-blue transition-colors">AI Services</Link></li>
-              <li><Link href="/#technologies" className="hover:text-accent-blue transition-colors">Technologies</Link></li>
-              <li><Link href="/#contact" className="hover:text-accent-blue transition-colors">Contact</Link></li>
+              <li><Link href="/case-studies" className="hover:text-accent-blue transition-colors">Case Studies</Link></li>
               <li><Link href="/faq" className="hover:text-accent-blue transition-colors">FAQ</Link></li>
+              <li><Link href="/contact" className="hover:text-accent-blue transition-colors">Contact</Link></li>
             </ul>
           </div>
 
